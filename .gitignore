@@ -7,7 +7,6 @@
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
-.fvm/flutter_sdk
 .packages
 .pub-cache/
 .pub/
@@ -197,3 +196,28 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.toptal.com/developers/gitignore/api/androidstudio,flutter
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Visual Studio Code
+.vscode/
+
+# Environment Variables & Secrets
+.env
+.env.*
+*.env
+
+# Flutter / Dart Tooling Extras
+symbols/
+.buildlog/
+
+# FVM (Flutter Version Management)
+.fvm/
+!.fvm/fvm_config.json

@@ -13,23 +13,15 @@ List<User> userFromJson(String str) => List<User>.from(json.decode(str).map((x) 
 String userToJson(List<User> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 @freezed
-class User with _$User {
+abstract class User with _$User {
   const factory User({
-    @JsonKey(name: "id")
     int? id,
-    @JsonKey(name: "email")
     String? email,
-    @JsonKey(name: "password")
     String? password,
-    @JsonKey(name: "name")
     String? name,
-    @JsonKey(name: "role")
     String? role,
-    @JsonKey(name: "avatar")
     String? avatar,
-    @JsonKey(name: "creationAt")
     String? creationAt,
-    @JsonKey(name: "updatedAt")
     String? updatedAt,
   }) = _User;
 

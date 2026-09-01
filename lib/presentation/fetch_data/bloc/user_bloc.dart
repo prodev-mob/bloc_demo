@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:bloc_demo/presentation/fetch_data/repository/user_repository.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import '../model/user_response.dart';
 import 'user_status.dart';
@@ -27,7 +27,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
       final List<User>? userDetails = await userRepository.getUser();
 
       if (userDetails != null && userDetails.isNotEmpty) {
-        print('User email: ${userDetails[0].email}');
+        debugPrint('User email: ${userDetails[0].email}');
 
         emit(
           state.copyWith(
@@ -43,7 +43,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
         );
       }
     } catch (e) {
-      print('Error fetching user details: $e');
+      debugPrint('Error fetching user details: $e');
       emit(
         state.copyWith(
           userStatus: UserStatus.failure,

@@ -11,7 +11,7 @@ ApiError apiErrorFromJson(String str) => ApiError.fromJson(json.decode(str));
 String apiErrorToJson(ApiError data) => json.encode(data.toJson());
 
 @freezed
-class ApiError with _$ApiError {
+abstract class ApiError with _$ApiError {
   const factory ApiError({
     required int statusCode,
     required dynamic message,

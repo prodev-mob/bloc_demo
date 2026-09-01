@@ -1,7 +1,7 @@
 part of 'user_bloc.dart';
 
 @freezed
-class UserState with _$UserState {
+abstract class UserState with _$UserState {
   const factory UserState({
     required UserStatus userStatus,
     required String data,

@@ -31,7 +31,7 @@ class Failed<T> extends ApiResult<T> {
 }
 
 class ServerError<T> extends Failed<T> {
-  ServerError(ApiError errors) : super(errors);
+  ServerError(super.errors);
 
   static ServerError<T> fromResponse<T>(Response response) {
     return ServerError(ApiError.fromJson(response.data));
